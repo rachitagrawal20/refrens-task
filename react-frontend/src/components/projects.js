@@ -24,9 +24,11 @@ class Projects extends Component {
             let i, j;
             let endDate;
             let techStack = 'Tech Stack - ';
-            let contributions;
+            let ret = [];
+            let topush;
 
             for(i = 0; i < projects.length; i++){
+                let contributions = [];
                 if(projects[i].endDate.length === 0)
                     endDate = 'Present'
                 else
@@ -34,25 +36,26 @@ class Projects extends Component {
                 for(j = 0; j < projects[i].techStack.length; j++){
                     techStack += ' ' + projects[i].techStack[j]; 
                 }
-                for(j = 0; j < projects[i].contributions; j++)
-                    contributions += <h4>projects[i].contributions[j]</h4>
-                return(
+                for(j = 0; j < projects[i].contributions.length; j++)
+                    contributions.push(<h4>{projects[i].contributions[j]}</h4>);
+                
+                topush = 
                     <div className = 'educations'>
                         <h3>{projects[i].projectTitle}</h3>
                         <div className = 'period'>
                                 <div id = 'left'> {projects[i].startDate}</div>
                                 <div id = 'right'>{endDate}</div>
                         </div>
-                        {projects[i].projectLink}
-                        <br/>
-                        <br/>
+                        
                         {contributions}
                         {techStack}
-
+                        
                     </div>
+                ret.push(topush);
 
-                );
+                
             }
+            return ret;
             
         }
     }

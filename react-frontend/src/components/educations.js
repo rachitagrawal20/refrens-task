@@ -23,23 +23,27 @@ class Educations extends Component {
             console.log(educations);
             let i;
             let endDate;
+            let ret = [];
+            let toPush;
             for(i = 0; i < educations.length; i++){
                 if(educations[i].endDate.length === 0)
                     endDate = 'Present'
                 else
                 endDate = educations[i].endDate
 
-                return (
-                <div className = 'educations'>
-                    <h3>{educations[i].instituteName}</h3>
-                    <div className = 'period'>
-                        <div id = 'left'> {educations[i].startDate}</div>
-                        <div id = 'right'>{endDate}</div>
+                toPush = 
+                    <div className = 'educations'>
+                        <h3>{educations[i].instituteName}</h3>
+                        <div className = 'period'>
+                            <div id = 'left'> {educations[i].startDate}</div>
+                            <div id = 'right'>{endDate}</div>
+                        </div>
+                        <h4>{educations[i].coureTaken}</h4>
                     </div>
-                    <h4>{educations[i].coureTaken}</h4>
-                </div>
-                )
+                ret.push(toPush);
+                
             }
+            return ret;
         }
     }
 }

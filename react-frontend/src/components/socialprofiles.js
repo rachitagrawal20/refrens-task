@@ -28,6 +28,7 @@ class SocialProfiles extends Component {
                 </div>  
 
             ));
+
         }
     }
 }

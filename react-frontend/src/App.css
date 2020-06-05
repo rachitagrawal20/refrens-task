@@ -1,5 +1,7 @@
 .App{
   font-family: Verdana, sans-serif;
+  margin-left: 14%;
+  margin-right: 14%;
 }
 .App-logo {
   height: 40vmin;
@@ -71,16 +73,17 @@
 .educations h3{
   margin-top: 0%;
   padding-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 0.5%;
 }
 
 .educations h4{
   margin-top: 0%;
   margin-bottom: 1%;
+  font-weight: 500;
 }
 
 .educations .period{
-  margin-bottom: 8%;
+  margin-bottom: 5%;
 }
 #left{
   float:left;

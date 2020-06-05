@@ -23,7 +23,7 @@ class Achievements extends Component {
             console.log(achievements);
             return achievements.map((achievement) => (
                 <div className = 'educations'>
-                {achievement.achievement}
+                <h4>{achievement.achievement}</h4>
                 </div>
 
             ));
